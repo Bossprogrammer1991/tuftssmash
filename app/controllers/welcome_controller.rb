@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 	def add
-		@val = "<p>hello there</p>"
+		@val = "hello there"
 		#redirect_to root_path
 	end
 
