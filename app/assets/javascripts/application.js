@@ -54,7 +54,7 @@ $("#last").change(function(){
 });
 
 function valid(){
-	return valE && valName;
+	return valE() && valName();
 }
 
 function valE(){
