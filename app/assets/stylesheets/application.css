@@ -12,3 +12,8 @@
  *= require bootstrap.min
  *= require_tree .
  */
+ 
+ 
+ .content{
+	padding: 1em;
+ }
