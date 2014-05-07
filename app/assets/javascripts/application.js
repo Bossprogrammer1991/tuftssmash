@@ -18,38 +18,39 @@
 
 $("#email").keyup(function(){
 	var vEmail = valE();
+	console.log(vEmail);
 	if (!vEmail){
-		if(! $(this).parent().parent().hasClass("error")){
+		if(!$(this).parent().parent().hasClass("error")){
 			$(this).parent().parent().addClass("error");
 		}
 	}
 	else{
 		$(this).parent().parent().removeClass("error");
-		$("#sub").disabled = valid();
+		$("#sub")[0].disabled = valid();
 	}
 });
 
 $("#first").keyup(function(){
 	var first = $("#first").val().replace(/ /g,'');
 	if (first == ""){
-		if(! $(this).parent().parent().hasClass("error")){
+		if(!$(this).parent().parent().hasClass("error")){
 			$(this).parent().parent().addClass("error");
 		}
 	}else{
 		$(this).parent().parent().removeClass("error");
-		$("#sub").disabled = valid();
+		$("#sub")[0].disabled = valid();
 	}	
 });
 
 $("#last").keyup(function(){
 	var last = $("#last").val().replace(/ /g,'');
 	if (last == ""){
-		if(! $(this).parent().parent().hasClass("error")){
+		if(!$(this).parent().parent().hasClass("error")){
 			$(this).parent().parent().addClass("error");
 		}
 	}else{
 		$(this).parent().parent().removeClass("error");
-		$("#sub").disabled = valid();
+		$("#sub")[0].disabled = valid();
 	}	
 });
 
