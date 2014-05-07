@@ -29,3 +29,8 @@
 .error{
 	background-color: #FF6666;
 }
+
+.note{
+	padding-left:1em;
+	color:#ccc;
+}
