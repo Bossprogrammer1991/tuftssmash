@@ -28,8 +28,8 @@ $(document).ready(function(){
 		}
 		else{
 			$(this).parent().parent().removeClass("error");
-			$("#sub")[0].disabled = !valid();
 		}
+		$("#sub")[0].disabled = !valid();
 	});
 
 	$("#first").keyup(function(){
@@ -40,8 +40,8 @@ $(document).ready(function(){
 			}
 		}else{
 			$(this).parent().parent().removeClass("error");
-			$("#sub")[0].disabled = !valid();
 		}	
+		$("#sub")[0].disabled = !valid();
 	});
 
 	$("#last").keyup(function(){
@@ -52,8 +52,8 @@ $(document).ready(function(){
 			}
 		}else{
 			$(this).parent().parent().removeClass("error");
-			$("#sub")[0].disabled = !valid();
 		}	
+		$("#sub")[0].disabled = !valid();
 	});
 });
 
