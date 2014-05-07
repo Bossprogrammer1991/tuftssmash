@@ -16,7 +16,7 @@
 //= require bootstrap.min
 //= require_tree .
 
-$("#email").change(function(){
+$("#email").keyup(function(){
 	var vEmail = valE();
 	if (!vEmail){
 		if(! $(this).parent().parent().hasClass("error")){
@@ -29,7 +29,7 @@ $("#email").change(function(){
 	}
 });
 
-$("#first").change(function(){
+$("#first").keyup(function(){
 	var first = $("#first").val().replace(/ /g,'');
 	if (first == ""){
 		if(! $(this).parent().parent().hasClass("error")){
@@ -41,7 +41,7 @@ $("#first").change(function(){
 	}	
 });
 
-$("#last").change(function(){
+$("#last").keyup(function(){
 	var last = $("#last").val().replace(/ /g,'');
 	if (last == ""){
 		if(! $(this).parent().parent().hasClass("error")){
