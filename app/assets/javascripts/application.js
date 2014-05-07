@@ -17,14 +17,14 @@
 //= require_tree .
 
 $("#email").change(function(){
-	var val = validateEmail($(this).val);
-	if (!val){
-		if(! $(this).parent().hasClass("error")){
-			$(this).parent().addClass("error");
+	var vEmail = valE();
+	if (!vEmail){
+		if(! $(this).parent().parent().hasClass("error")){
+			$(this).parent().parent().addClass("error");
 		}
 	}
 	else{
-		$(this).parent().removeClass("error");
+		$(this).parent().parent().removeClass("error");
 		$("#sub").disabled = val();
 	}
 });
@@ -32,11 +32,11 @@ $("#email").change(function(){
 $("#first").change(function(){
 	var first = $("#first").val().replace(/ /g,'');
 	if (first == ""){
-		if(! $(this).parent().hasClass("error")){
-			$(this).parent().addClass("error");
+		if(! $(this).parent().parent().hasClass("error")){
+			$(this).parent().parent().addClass("error");
 		}
 	}else{
-		$(this).parent().removeClass("error");
+		$(this).parent().parent().removeClass("error");
 		$("#sub").disabled = val();
 	}	
 });
@@ -44,17 +44,13 @@ $("#first").change(function(){
 $("#last").change(function(){
 	var last = $("#last").val().replace(/ /g,'');
 	if (last == ""){
-		if(! $(this).parent().hasClass("error")){
-			$(this).parent().addClass("error");
+		if(! $(this).parent().parent().hasClass("error")){
+			$(this).parent().parent().addClass("error");
 		}
 	}else{
-		$(this).parent().removeClass("error");
+		$(this).parent().parent().removeClass("error");
 		$("#sub").disabled = val();
 	}	
-});
-
-$("#last").change(function(){
-	$("#sub").disabled = val();
 });
 
 function val(){
