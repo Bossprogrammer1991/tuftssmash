@@ -15,3 +15,63 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require_tree .
+
+$("#email").change(function(){
+	var val = validateEmail($(this).val);
+	if (!val){
+		if(! $(this).parent().hasClass("error")){
+			$(this).parent().addClass("error");
+		}
+	}
+	else{
+		$(this).parent().removeClass("error");
+		$("#sub").disabled = val();
+	}
+});
+
+$("#first").change(function(){
+	var first = $("#first").val().replace(/ /g,'');
+	if (first == ""){
+		if(! $(this).parent().hasClass("error")){
+			$(this).parent().addClass("error");
+		}
+	}else{
+		$(this).parent().removeClass("error");
+		$("#sub").disabled = val();
+	}	
+});
+
+$("#last").change(function(){
+	var last = $("#last").val().replace(/ /g,'');
+	if (last == ""){
+		if(! $(this).parent().hasClass("error")){
+			$(this).parent().addClass("error");
+		}
+	}else{
+		$(this).parent().removeClass("error");
+		$("#sub").disabled = val();
+	}	
+});
+
+$("#last").change(function(){
+	$("#sub").disabled = val();
+});
+
+function val(){
+	return valE && valName;
+}
+
+function valE(){
+	return validateEmail($("#email").val());
+}
+
+function valName(){
+	var first = $("#first").val().replace(/ /g,'');
+	var last = $("#last").val().replace(/ /g,'');
+	return first != "" && last != "";
+}
+
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@tufts\.edu$/;
+    return re.test(email);
+} 

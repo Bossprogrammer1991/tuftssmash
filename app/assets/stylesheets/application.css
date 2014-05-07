@@ -21,3 +21,11 @@
  .header{
 	padding: 0 1em;
 }
+
+.required{
+	color: #E3170D;
+}
+
+.error{
+	background-color: #FF6666;
+}
