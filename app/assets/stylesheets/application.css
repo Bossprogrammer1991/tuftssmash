@@ -14,6 +14,10 @@
  */
  
  
- .header,.content{
+.content{
 	padding: 1em;
  }
+
+ .header{
+	padding: 0 1em;
+}
