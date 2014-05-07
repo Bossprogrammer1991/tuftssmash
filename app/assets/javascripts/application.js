@@ -25,7 +25,7 @@ $("#email").change(function(){
 	}
 	else{
 		$(this).parent().parent().removeClass("error");
-		$("#sub").disabled = val();
+		$("#sub").disabled = valid();
 	}
 });
 
@@ -37,7 +37,7 @@ $("#first").change(function(){
 		}
 	}else{
 		$(this).parent().parent().removeClass("error");
-		$("#sub").disabled = val();
+		$("#sub").disabled = valid();
 	}	
 });
 
@@ -49,11 +49,11 @@ $("#last").change(function(){
 		}
 	}else{
 		$(this).parent().parent().removeClass("error");
-		$("#sub").disabled = val();
+		$("#sub").disabled = valid();
 	}	
 });
 
-function val(){
+function valid(){
 	return valE && valName;
 }
 
